@@ -5,6 +5,11 @@ If you want to load a legacy add-on, then the following steps will allow you to
 do so. Just keep in mind that these add-ons can break at any time when Firefox
 updates.
 
+**Add-ons built using legacy technology are a security and stability risk,
+because these add-ons run with the full privileges of the browser without any
+sandboxing.
+Do not follow these instructions unless you are aware of the consequences.**
+
 These steps rely on "autoconfig", a feature to support
 [enterprise deployments of Firefox](https://developer.mozilla.org/en-US/Firefox/Enterprise_deployment#Configuration).
 
