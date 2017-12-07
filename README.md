@@ -49,6 +49,9 @@ WebExtension version, follow the next steps:
   - `extensions.legacy.enabled` to `true`.
   - `extensions.update.autoUpdateDefault` to `false`.
 
+  NOTE: If you do not want to be without legacy add-ons during the upgrade,
+  set these preferences *before* starting the new Firefox version.
+
 4. Go to `about:addons` and confirm that the list of add-ons looks fine.
 5. Some add-ons may already be enabled. If a request to restart Firefox
    appears, then the add-on is either not restartless, or not marked as
