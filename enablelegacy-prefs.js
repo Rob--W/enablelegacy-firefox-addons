@@ -1,6 +1,6 @@
 // First line must be a comment.
 
-pref("general.config.filename", "mozilla.cfg");
+pref("general.config.filename", "enablelegacy.cfg");
 pref("general.config.obscure_value", 0);
 
 // Do not automatically upgrade legacy add-ons when upgrading the browser.
