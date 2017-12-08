@@ -15,7 +15,7 @@ These steps rely on "autoconfig", a feature to support
 
 To enable legacy add-ons:
 
-1. Copy the `mozilla.cfg` to Firefox's application directory,
+1. Copy the `enablelegacy.cfg` to Firefox's application directory,
    and `enablelegacy-prefs.js` to the `defaults/pref/` subdirectory.
    If you use Linux, just run `sudo make install`.
 2. Visit `about:config` and set the preferences:
