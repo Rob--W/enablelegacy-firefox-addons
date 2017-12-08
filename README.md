@@ -78,7 +78,7 @@ can either copy the "Download anyway" link below the install button, remove
 Enter.
 
 Another way to get the install button to be clickable (and search results to
-include legacy add-ons) is to use thhe built-in devtools to change the
+include legacy add-ons) is to use the built-in devtools to change the
 [user agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox):
 
 1. Open the built-in Responsive Design Mode (devtools)
