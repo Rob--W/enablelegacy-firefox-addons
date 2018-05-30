@@ -1,0 +1,11 @@
+[Trigger]
+Type = File
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Target = usr/lib/firefox/omni.ja
+
+[Action]
+Description = Enabling unsigned and legacy extension prefs in Firefox...
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/patch-firefox-enable-legacy.py install /usr/lib/firefox/omni.ja
