@@ -37,10 +37,8 @@ def setAppConstant(key, defaultValue, newValue):
 
 if install:
     setAppConstant(b'MOZ_REQUIRE_SIGNING', b'true', b'!!!1')
-    setAppConstant(b'MOZ_ALLOW_LEGACY_EXTENSIONS', b'false', b'!!!!1')
 else:
     setAppConstant(b'MOZ_REQUIRE_SIGNING', b'!!!1', b'true')
-    setAppConstant(b'MOZ_ALLOW_LEGACY_EXTENSIONS', b'!!!!1', b'false')
 
 
 # Write only after all validation has passed.
