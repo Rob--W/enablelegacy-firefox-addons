@@ -26,8 +26,28 @@ def setAppConstant(key, defaultValue, newValue):
       true,
     <blank line>
 
+    Since Firefox 136, the source looks like this:
+    <blank line>
+      MOZ_REQUIRE_SIGNING: true,
+    <blank line>
+
     """
     global data
+
+    oldline = b'\n\n  %s: %s,\n' % (key, defaultValue)
+    newline = b'\n\n  %s: %s,\n' % (key, newValue)
+    assert newline not in data, 'AppConstants should not already be patched'
+    i = data.find(oldline)
+    if i != -1:
+        # Firefox 136 and later use one line (bug 1939273).
+        # Sanity check that we are in AppConstants.sys.mjs, same as below.
+        filestart = data.rfind(b'mozilla.org/MPL', 0, i)
+        assert filestart != -1, b'Must find license of AppConstants.%s' % key
+        assert b'AppConstants = Object.freeze' in data[filestart:i], \
+               b'Must find AppConstants.%s within AppConstants.sys.mjs' % key
+        data = data[:i] + newline + data[i+len(newline):]
+        return
+
     key = b'\n\n  %s:\n' % key
     i = data.find(key)
     assert i != -1, b'Must find AppConstants.%s' % key
