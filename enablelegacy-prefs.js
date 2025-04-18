@@ -2,6 +2,7 @@
 
 pref("general.config.filename", "enablelegacy.cfg");
 pref("general.config.obscure_value", 0);
+pref("general.config.sandbox_enabled", false);
 
 // Do not automatically upgrade legacy add-ons when upgrading the browser.
 // (Note: To avoid unwanted legacy -> WebExtension upgrades,
